@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact</title>
+</head>
+<body>
+	<h1>Projects list</h1>
+		<ul>
+			<%@projects.each do |project|%>
+			<li><%= project.name%>
+				<% if project.description.present?%>
+			-<%= project.description%>
+			<%end%>
+			</li>
+			<%end%>
+		</ul>
+</body>
+</html>

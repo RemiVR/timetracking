@@ -4,4 +4,7 @@ class SitesController < ApplicationController
 
 	def contact
 	end
+
+	def projects
+	end
 end

@@ -4,6 +4,6 @@ class Project < ActiveRecord::Base
 	end
 	def self.clean_old
 		
-	where("created_at > ?", Date.current - 1.week).destroy_all	
+	where("created_at > ?", Date.current - 1.week).destroy_all
 	end
 end
