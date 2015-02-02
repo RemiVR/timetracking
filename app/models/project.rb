@@ -6,4 +6,7 @@ class Project < ActiveRecord::Base
 		
 	where("created_at > ?", Date.current - 1.week).destroy_all
 	end
+	def self.last_created_projects
+		order("created_at DESC").limit(10)
+	end
 end
