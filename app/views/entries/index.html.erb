@@ -2,8 +2,17 @@
 	<h1>Projects list</h1>
 		<ul>
 			<%@entries.each do |entry|%>
-			<li><%= entry.hours%>
-				<%= entry.minutes%>
+			<li><%= entry.hours%>h
+				<%= entry.minutes%>m
+				<%= entry.date%>
+			</li>
+			<%end%>
+		</ul>
+		<ul>
+			<h2>Projects by year</h2>
+			<%@entries_by_month.each do |entry|%>
+			<li><%= entry.hours%>h
+				<%= entry.minutes%>m
 				<%= entry.date%>
 			</li>
 			<%end%>

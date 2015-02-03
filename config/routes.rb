@@ -10,7 +10,7 @@ root 'sites#home'
 get '/contact' => 'sites#contact'
 get '/projects' => 'projects#index'
 get '/projects/:id' => 'projects#show'
-get '/projects/:id/entries' => 'entries#index'
+get '/projects/:project_id/entries' => 'entries#index'
 
 
 

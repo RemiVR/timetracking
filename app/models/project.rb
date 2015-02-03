@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
 	has_many :entries
-	
+
 	def self.iron_find(id)
 		where(id: id).first
 	end
@@ -10,5 +10,15 @@ class Project < ActiveRecord::Base
 	end
 	def self.last_created_projects
 		order("created_at DESC").limit(10)
+	end
+	def entries_of_last_month
+		from = Date.new(Date.today.year, Date.today.month, 1)
+		to = Date.new(Date.today.year, Date.today.month, -1)
+		entries.where(created_at: from..to)
+	end
+	def entries_by_month(year, month)
+		from = Date.new(year, month, 1)
+		to = Date.new(year, month, -1)
+		entries.where(created_at: from..to)
 	end
 end
