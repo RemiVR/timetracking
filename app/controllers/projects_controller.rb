@@ -1,10 +1,9 @@
 class ProjectsController < ApplicationController
 	def index
-		if @projects.empty?
-			render 'no_projects_found'
-		else
-			@projects = Project.last_created_projects
-		end
+		@projects.last_created_projects
+		# if @projects.empty?
+		# 	render 'no_projects_found'
+		# end
 	end
 	
 	def show
