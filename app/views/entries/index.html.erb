@@ -10,6 +10,7 @@
 		</ul>
 		<ul>
 			<h2>Projects by year</h2>
+			Hours I have been working: <%= @hours %>
 			<%@entries_by_month.each do |entry|%>
 			<li><%= entry.hours%>h
 				<%= entry.minutes%>m

@@ -12,9 +12,7 @@ class Project < ActiveRecord::Base
 		order("created_at DESC").limit(10)
 	end
 	def entries_of_last_month
-		from = Date.new(Date.today.year, Date.today.month, 1)
-		to = Date.new(Date.today.year, Date.today.month, -1)
-		entries.where(created_at: from..to)
+		entries_by_month(Date.today.year, Date.today.month)
 	end
 	def entries_by_month(year, month)
 		from = Date.new(year, month, 1)
