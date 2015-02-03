@@ -15,7 +15,7 @@ Project.create name: "lenovo", description: "almost great"
 Project.create name: "juice", description: "drinkable"
 beer_project = Project.create name: "beer", description: "loved"
 
-beer_project.entries.create hour: 0, minutes: 40,
+beer_project.entries.create hours: 0, minutes: 40, date: Date.today
 
 
 
