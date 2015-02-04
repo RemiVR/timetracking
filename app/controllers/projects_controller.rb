@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+	def home
+	end
 	def index
 		@projects = Project.last_created_projects
 	end
