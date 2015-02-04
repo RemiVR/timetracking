@@ -8,8 +8,8 @@
 				<%= entry.date%>
 				<%= entry.comments%></h3>
 			</li>
-			<li><h4><%= link_to("Edit entry", edit_project_entry_path(entry.project, entry))%>
-				<%= link_to("Delete", project_entries_path(entry.project, entry), method: :delete, data: {confirm: 'Are you sure?'})%></h4>
+			<li><h4><%= link_to("Edit entry", edit_project_entry_path(@project, entry))%>
+				<%= link_to("Delete", project_entry_path(@project, entry), method: :delete, data: {confirm: 'Are you sure?'})%></h4>
 			</li>
 		<%end%>
 	</ul>
