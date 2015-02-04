@@ -1,4 +1,4 @@
-class SitesController < ApplicationController
+class SiteController < ApplicationController
 	def home
 	end
 
