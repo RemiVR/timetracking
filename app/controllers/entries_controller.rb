@@ -32,6 +32,13 @@ class EntriesController < ApplicationController
 			render 'edit'
 		end
 	end
+	def destroy
+		@project = Project.find params[:project_id]
+		@entry = @project.entries.find params[:id]
+		if @entry.destroy
+			redirect_to action: 'index', controller: 'entries'
+		end
+	end
 	private
 	def entry_params
 		params.require(:entry).permit(:hours, :minutes, :date, :comments)
