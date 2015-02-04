@@ -1,4 +1,10 @@
 class Project < ActiveRecord::Base
+	
+	validates :name, presence: true
+	validates :name, uniqueness: true
+	validates :name, length: {maximum: 30}
+	validates :name, format: {with: /\A[0-9]/}
+
 	has_many :entries
 
 	def self.iron_find(id)
