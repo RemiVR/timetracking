@@ -3,7 +3,10 @@ class Project < ActiveRecord::Base
 	validates :name, presence: true
 	validates :name, uniqueness: true
 	validates :name, length: {maximum: 30}
-	validates :name, format: {with: /\A[0-9]/}
+	validates :name, format: {with: /\A[a-zA-Z]/}
+	validates :description, presence: true
+	validates :description, length: {maximum: 30}
+
 
 	has_many :entries
 
