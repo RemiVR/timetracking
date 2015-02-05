@@ -1,0 +1,11 @@
+<h3>List of people working on projects</h3>
+
+<ul>
+	<%@person.each do |person|%>
+	<li>
+		<%= person.name%> workin on projects:
+	</li>
+	<%end%>
+</ul>
+
+	<h4><%= link_to("Add person", new_person_path)%></h4>

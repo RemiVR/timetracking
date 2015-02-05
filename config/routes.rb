@@ -8,6 +8,7 @@ get '/' => 'site#home'
 resources :projects do
   resources :entries
 end
+resources :people
 
 #        Prefix Verb URI    Pattern                                    Controller#Action
 #                    GET    /                                                site#home
