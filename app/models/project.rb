@@ -7,6 +7,8 @@ class Project < ActiveRecord::Base
 	validates :description, presence: true
 	validates :description, length: {maximum: 30}
 
+	has_attached_file :logo, styles: {:medium => "300x300>", :thumb => "60x60>"}
+	validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
 
 	has_many :entries
 

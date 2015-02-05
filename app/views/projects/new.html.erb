@@ -6,12 +6,15 @@
 </ul>
 <%end%>
 
-<%= form_for [@project] do |f|%>
+<%= form_for [@project], :html => { :multipart => true } do |f|%>
 	<%= f.label :name%>
 	<%= f.text_field :name%>
 	<br>
 	<%= f.label :description%>
 	<%= f.text_field :description%>
 	<br>
+	<%= f.label :logo%>
+	<%= f.file_field :logo%>
 	<%= f.submit 'save'%>
 <%end%>
+
